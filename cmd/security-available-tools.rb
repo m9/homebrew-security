@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "cli/parser"
 require "utils/shell"
 
 module Homebrew
@@ -8,8 +9,6 @@ module Homebrew
   def security_available_tools_args
     Homebrew::CLI::Parser.new do
       description <<~EOS
-        `security-available-tools`
-        
         Prints list of available tools for m9/security tap
       EOS
     end
